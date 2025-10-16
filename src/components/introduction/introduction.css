@@ -1,0 +1,66 @@
+.bg-highlight {
+  background: linear-gradient(to top, #ffc8c8 40%, transparent 40%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+/* Nama mengkilap elegan */
+@keyframes shine {
+  0% { background-position: -200%; }
+  100% { background-position: 200%; }
+}
+
+.animate-shine {
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+}
+
+/* Skill Bubbles - muncul/hilang dan floating */
+/* Skill Bubbles - muncul/hilang dan floating */
+.bubble {
+  background: rgba(128, 128, 128, 0.85); /* soft gray / elegan */
+  color: #fff;
+  font-size: 1rem; /* lebih besar dari sebelumnya */
+  font-weight: 600;
+  padding: 0.5rem 0.75rem; /* lebih tebal */
+  border-radius: 9999px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  opacity: 0;
+  animation: float-bubble 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 20;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optional: Glow saat muncul */
+.bubble::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Floating animasi */
+@keyframes float-bubble {
+  0%, 100% { transform: translateY(0); opacity: 0; }
+  10%, 90% { opacity: 1; }
+  50% { transform: translateY(-12px); opacity: 1; }
+}
+
+@keyframes float-bubble {
+  0%, 100% { transform: translateY(0); opacity: 0; }
+  10%, 90% { opacity: 1; }
+  50% { transform: translateY(-10px); opacity: 1; }
+}
+
+/* Foto bergerak naik-turun */
+@keyframes photo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-photo-float {
+  animation: photo-float 6s ease-in-out infinite;
+}
