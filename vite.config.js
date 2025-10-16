@@ -18,6 +18,9 @@ export default defineConfig(({ mode }) => {
           secure: true,
         },
       },
+       build: {
+      outDir: "dist", // pastikan output folder
     },
+    }
   };
 });
